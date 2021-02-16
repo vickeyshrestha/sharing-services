@@ -54,13 +54,13 @@ func NewPostgresDbConnection(host, user, password, dbName string, port int) (Dri
 		host, port, user, password, dbName)
 	db, err := sql.Open("postgres", psqlInfo)
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
 	defer db.Close()
 
 	err = db.Ping()
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
 
 	fmt.Println("Successfully connected!")
