@@ -14,16 +14,8 @@ func main() {
 
 	// insert
 	// hardcoded
-	insertStmt := `insert into "Students"("Name", "Roll") values('John', 1)`
+	insertStmt := `insert into "Students"("Name", "Roll") values('Vickey', 1)`
 	_, err = db.Sql.Exec(insertStmt)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	// dynamic
-	insertDynStmt := `insert into "Students"("Name", "Roll") values($1, $2)`
-	_, err = db.Sql.Exec(insertDynStmt, "Jane", 2)
 	if err != nil {
 		fmt.Println(err)
 		return
