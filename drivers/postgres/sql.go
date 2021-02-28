@@ -18,7 +18,6 @@ func NewPostgresDbConnection(host, user, password, dbName string, port int) (*sq
 	if err != nil {
 		return nil, err
 	}
-	defer db.Close()
 
 	err = db.Ping()
 	if err != nil {
