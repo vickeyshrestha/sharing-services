@@ -6,11 +6,11 @@ import (
 )
 
 const (
-	host         = "127.0.0.1"
+	host         = "192.168.202.128"
 	user         = "postgres"
 	password     = "admin"
 	databaseName = "godzilla"
-	port         = 5432
+	port         = 5104
 )
 
 func main() {

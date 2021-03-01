@@ -6,11 +6,11 @@ import (
 	_ "github.com/lib/pq"
 )
 
-type sqlDriver struct {
+type Driver struct {
 	Sql *sql.DB
 }
 
-func NewPostgresDbConnection(host, user, password, dbName string, port int) (*sqlDriver, error) {
+func NewPostgresDbConnection(host, user, password, dbName string, port int) (*Driver, error) {
 	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
 		"password=%s dbname=%s sslmode=disable",
 		host, port, user, password, dbName)
@@ -24,5 +24,5 @@ func NewPostgresDbConnection(host, user, password, dbName string, port int) (*sq
 		return nil, err
 	}
 	fmt.Println("Successfully connected!")
-	return &sqlDriver{Sql: db}, nil
+	return &Driver{Sql: db}, nil
 }
