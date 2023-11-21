@@ -1,4 +1,4 @@
-module sharing-services/drivers/sql
+module github/sharing-services/drivers/sql
 
 go 1.15
 

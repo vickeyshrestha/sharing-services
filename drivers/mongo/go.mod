@@ -1,4 +1,4 @@
-module sharing-services/drivers/mongo
+module github/sharing-services/drivers/mongo
 
 go 1.15
 

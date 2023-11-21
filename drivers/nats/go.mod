@@ -1,4 +1,4 @@
-module sharing-services/drivers/nats
+module github/sharing-services/drivers/nats
 
 go 1.15
 
