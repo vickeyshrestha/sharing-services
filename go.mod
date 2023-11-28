@@ -1,4 +1,4 @@
-module github/sharing-services
+module github.com/vickeyshrestha/sharing-services
 
 go 1.21.4
 
