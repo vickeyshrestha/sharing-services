@@ -1,4 +1,4 @@
-module github/sharing-services/drivers/nats
+module github.com/vickeyshrestha/sharing-services/drivers/nats
 
 go 1.21.4
 
