@@ -3,7 +3,7 @@ package main
 // publisher
 import (
 	"fmt"
-	"github/sharing-services/drivers/nats"
+	"github.com/vickeyshrestha/sharing-services/drivers/nats"
 	"log"
 
 	"time"
