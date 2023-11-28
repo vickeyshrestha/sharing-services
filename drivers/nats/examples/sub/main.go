@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
+	"github/sharing-services/drivers/nats"
 	"log"
-	"sharing-services/drivers/nats"
 )
 
 func main() {
 
-	encodedConnection, err := nats.NewNatsConnectionClient("192.168.202.128:4222")
+	encodedConnection, err := nats.NewNatsConnectionClient("localhost:5101") // this is your nats msg bus address and port
 	if err != nil {
 		fmt.Println(err)
 		return

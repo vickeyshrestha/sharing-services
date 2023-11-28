@@ -3,8 +3,8 @@ module github/sharing-services/drivers/nats
 go 1.15
 
 require (
-	github.com/golang/protobuf v1.4.3 // indirect
-	github.com/nats-io/nats-server/v2 v2.1.9 // indirect
-	github.com/nats-io/nats.go v1.10.0
-	google.golang.org/protobuf v1.25.0 // indirect
+	github.com/klauspost/compress v1.17.3 // indirect
+	github.com/nats-io/nats.go v1.31.0
+	github.com/nats-io/nkeys v0.4.6 // indirect
+	golang.org/x/crypto v0.16.0 // indirect
 )
