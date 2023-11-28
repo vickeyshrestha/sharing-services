@@ -1,12 +1,13 @@
 package main
 
 import (
+	sql2 "database/sql"
 	"fmt"
-	"sharing-services/drivers/sql"
+	"github/sharing-services/drivers/sql"
 )
 
 const (
-	host         = "192.168.202.128"
+	host         = "localhost"
 	user         = "postgres"
 	password     = "admin"
 	databaseName = "godzilla"
@@ -19,7 +20,13 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	defer db.Sql.Close()
+	defer func(Sql *sql2.DB) {
+		err := Sql.Close()
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+	}(db.Sql)
 
 	// insert
 	// hardcoded
