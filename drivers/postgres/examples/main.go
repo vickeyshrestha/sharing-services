@@ -3,7 +3,7 @@ package main
 import (
 	sql2 "database/sql"
 	"fmt"
-	"github/sharing-services/drivers/sql"
+	"github.com/vickeyshrestha/sharing-services/drivers/postgres"
 )
 
 const (
